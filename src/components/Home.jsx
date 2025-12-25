@@ -1,4 +1,3 @@
-"use client"
 import Navbar from "./Navbar"
 import Hero from "./Hero"
 import About from "./About"
@@ -9,7 +8,7 @@ import Footer from "./Footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[oklch(0.08_0_0)]">
       <Navbar />
       <main>
         <Hero />

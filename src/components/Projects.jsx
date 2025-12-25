@@ -1,5 +1,3 @@
-"use client"
-
 export default function Projects() {
   const projects = [
     {
@@ -52,13 +50,23 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden
+                 bg-[oklch(0.12_0.02_240/0.3)]"
+    >
+      {/* glow blob */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 right-0 w-80 h-80 rounded-full blur-3xl
+                        bg-[oklch(0.65_0.3_40/0.1)]" />
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-16
+                       bg-gradient-to-r
+                       from-[oklch(0.62_0.32_180)]
+                       to-[oklch(0.6_0.28_290)]
+                       bg-clip-text text-transparent">
           Featured Projects
         </h2>
 
@@ -66,19 +74,42 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-card border border-primary/30 rounded-xl overflow-hidden hover:border-accent transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 transform hover:-translate-y-2"
+              className="group relative rounded-xl overflow-hidden
+                         bg-[oklch(0.12_0.02_240)]
+                         border border-[oklch(0.6_0.28_290/0.3)]
+                         transition-all duration-300
+                         hover:border-[oklch(0.62_0.32_180)]
+                         hover:shadow-2xl hover:shadow-[oklch(0.6_0.28_290/0.2)]
+                         hover:-translate-y-2"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-accent/0 group-hover:from-primary/10 group-hover:to-accent/10 transition-all duration-300" />
+              <div className="absolute inset-0 transition-all duration-300
+                              bg-gradient-to-br
+                              from-[oklch(0.6_0.28_290/0)]
+                              to-[oklch(0.62_0.32_180/0)]
+                              group-hover:from-[oklch(0.6_0.28_290/0.1)]
+                              group-hover:to-[oklch(0.62_0.32_180/0.1)]" />
 
               <div className="p-6 space-y-4 relative z-10">
-                <h3 className="text-xl font-bold group-hover:text-accent transition-colors">{project.title}</h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">{project.description}</p>
+                <h3 className="text-white text-xl font-bold transition-colors
+                               group-hover:text-[oklch(0.62_0.32_180)]">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed
+                              text-[oklch(0.98_0_0/0.7)]">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 rounded text-xs bg-accent/20 text-accent font-medium border border-accent/30 hover:border-accent transition-colors"
+                      className="px-2 py-1 rounded text-xs font-medium
+                                 bg-[oklch(0.62_0.32_180/0.2)]
+                                 text-[oklch(0.62_0.32_180)]
+                                 border border-[oklch(0.62_0.32_180/0.3)]
+                                 hover:border-[oklch(0.62_0.32_180)]
+                                 transition-colors"
                     >
                       {tech}
                     </span>
@@ -90,15 +121,28 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-3 py-2 rounded-lg text-center text-sm font-semibold bg-primary/20 text-primary hover:bg-primary hover:text-foreground transition-all border border-primary/30 hover:border-primary"
+                    className="flex-1 px-3 py-2 rounded-lg text-center text-sm font-semibold
+                               bg-[oklch(0.6_0.28_290/0.2)]
+                               text-[oklch(0.6_0.28_290)]
+                               border border-[oklch(0.6_0.28_290/0.3)]
+                               hover:bg-[oklch(0.6_0.28_290)]
+                               hover:text-[oklch(0.98_0_0)]
+                               transition-all"
                   >
                     GitHub
                   </a>
+
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-3 py-2 rounded-lg text-center text-sm font-semibold bg-accent/20 text-accent hover:bg-accent hover:text-background transition-all border border-accent/30 hover:border-accent"
+                    className="flex-1 px-3 py-2 rounded-lg text-center text-sm font-semibold
+                               bg-[oklch(0.62_0.32_180/0.2)]
+                               text-[oklch(0.62_0.32_180)]
+                               border border-[oklch(0.62_0.32_180/0.3)]
+                               hover:bg-[oklch(0.62_0.32_180)]
+                               hover:text-[oklch(0.08_0_0)]
+                               transition-all"
                   >
                     Live Demo
                   </a>
