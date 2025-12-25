@@ -26,7 +26,11 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-[oklch(0.98_0_0)]">
+        <h2 className="text-4xl font-bold mb-16
+                       bg-gradient-to-r
+                       from-[oklch(0.62_0.32_180)]
+                       to-[oklch(0.6_0.28_290)]
+                       bg-clip-text text-transparent">
           Skills & Technologies
         </h2>
 
