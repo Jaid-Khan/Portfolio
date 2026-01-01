@@ -6,6 +6,8 @@ import Projects from "./Projects"
 import Contact from "./Contact"
 import Footer from "./Footer"
 import Education from "./Education"
+import Experience from "./Experience"
+import Certifications from "./Certifications"
 
 export default function Home() {
   return (
@@ -13,10 +15,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Education />
         <Skills />
         <Projects />
+        <Experience />
+        <Certifications/>
+        <Education />
+        <About />
         <Contact />
       </main>
       <Footer />

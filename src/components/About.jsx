@@ -35,6 +35,9 @@ export default function About() {
               continuously learning to stay aligned with current web
               technologies and industry best practices.
             </p>
+            <p className="text-lg leading-relaxed text-[oklch(0.98_0_0/0.7)]">
+            Currently strengthening full-stack MERN skills through hands-on projects and continuous learning.
+            </p>
           </div>
 
           {/* Right Cards */}

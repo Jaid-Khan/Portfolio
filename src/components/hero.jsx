@@ -66,16 +66,16 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl font-medium text-[oklch(0.62_0.32_180)]">
-              Frontend Developer | React & MERN Stack
+              Frontend Developer (React) | MERN Stack Enthusiast
             </p>
 
             <p className="text-lg leading-relaxed text-[oklch(0.98_0_0/0.7)] max-w-xl mx-auto md:mx-0">
-              Frontend Developer with hands-on experience in building responsive
-              and scalable web applications using React. Skilled in
-              component-based architecture, state management, API integration,
-              and modern UI development. Familiar with full-stack workflows
-              using the MERN stack and focused on delivering clean,
-              user-friendly interfaces.
+              Frontend Developer with hands-on experience building responsive
+              and scalable web applications using React for real-world use
+              cases. Strong in component-based architecture, state management,
+              and REST API integration. Experienced with modern UI development
+              and familiar with full-stack workflows using the MERN stack.
+              Focused on writing clean, maintainable, and user-friendly code.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">

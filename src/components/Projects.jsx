@@ -1,52 +1,44 @@
 export default function Projects() {
   const projects = [
-    {
-      title: "Task Manager App",
-      description:
-        "A feature-rich task management application built with React, showcasing state management and UI patterns.",
-      tech: ["React.js", "JavaScript", "CSS3", "localStorage"],
-      github: "https://github.com",
-      demo: "#",
-    },
-    {
-      title: "REST API Integration",
-      description:
-        "Dynamic React application that fetches and displays data from REST APIs with error handling and loading states.",
-      tech: ["React.js", "Fetch API", "Node.js", "Express.js"],
-      github: "https://github.com",
-      demo: "#",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "Responsive weather application with real-time data fetching, built to demonstrate API integration and responsive design.",
-      tech: ["React.js", "Axios", "Tailwind CSS", "Responsive Design"],
-      github: "https://github.com",
-      demo: "#",
-    },
-    {
+        {
       title: "E-Commerce Product Page",
       description:
-        "A modern product showcase page with filtering, sorting, and interactive features using component-based architecture.",
-      tech: ["React.js", "JavaScript", "Tailwind CSS", "Component Design"],
+        "Developed a responsive e-commerce web application that allows users to browse products, manage a shopping cart, and interact with a dynamic user interface. The project focuses on clean UI, component-based architecture, and efficient state handling using modern front-end technologies.",
+      tech: ["HTML", "CSS", "JavaScript","React.js", "Tailwind CSS", "Component Design", "Responsive Design"],
+      github: "https://github.com/Jaid-Khan/E-Commerce",
+      demo: "https://urbaneaseecommerce.netlify.app/",
+    },
+    {
+      title: "Cyber Cafe Website",
+      description:
+        "Designed and developed a modern, responsive Cyber Café website that showcases services, important links, and contact options with clear navigation and engaging UI. The site includes responsive layouts and interactive elements optimized for both desktop and mobile users.",
+      tech: ["HTML", "CSS3", "JavaScript", "Tailwind CSS", "Responsive Design"],
       github: "https://github.com",
-      demo: "#",
+      demo: "https://alwaysonlineshop.netlify.app/",
     },
     {
       title: "Portfolio Website",
-      description: "Personal portfolio demonstrating modern web design, smooth animations, and responsive layouts.",
-      tech: ["React.js", "Next.js", "Tailwind CSS", "Animation"],
-      github: "https://github.com",
-      demo: "#",
+      description: "A personal portfolio website built to showcase my skills, projects, and professional background with a clean and responsive UI. It highlights my work, experience, and contact information in an organized layout to make a strong first impression on employers.",
+      tech: ["HTML", "CSS", "Javascript", "Tailwind CSS",],
+      github: "https://github.com/Jaid-Khan/Jaid_Khan_Portfolio_Website",
+      demo: "https://jaidkhan.netlify.app/",
     },
     {
-      title: "Chat Application UI",
+      title: "Digital Clock",
       description:
-        "Interactive chat interface showcasing component composition, state management, and modern UI patterns.",
-      tech: ["React.js", "CSS Modules", "JavaScript", "UI/UX Design"],
-      github: "https://github.com",
-      demo: "#",
+        "A sleek and responsive Digital Clock built using HTML, Tailwind CSS, and JavaScript, designed to display the current time in real-time with smooth animations and modern styling.",
+      tech: ["HTML", "Tailwind CSS", "JavaScript"],
+      github: "https://github.com/Jaid-Khan/Digital-Clock",
+      demo: "https://digital-clock-jaid-khan.netlify.app/",
     },
+    // {
+    //   title: "Chat Application UI",
+    //   description:
+    //     "Interactive chat interface showcasing component composition, state management, and modern UI patterns.",
+    //   tech: ["React.js", "CSS Modules", "JavaScript", "UI/UX Design"],
+    //   github: "https://github.com",
+    //   demo: "#",
+    // },
   ]
 
   return (
@@ -70,7 +62,7 @@ export default function Projects() {
           Featured Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
