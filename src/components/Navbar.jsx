@@ -1,14 +1,13 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: "smooth" })
-    setIsOpen(false)
-  }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
 
   const navLinks = [
     { label: "Skills", id: "skills" },
@@ -18,39 +17,45 @@ export default function Navbar() {
     { label: "Education", id: "education" },
     { label: "About", id: "about" },
     { label: "Contact", id: "contact" },
-  ]
+  ];
 
   return (
     <>
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-slate-900 border-b border-yellow-400">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-
-          {/* Logo (smaller on mobile) */}
+          {/* LOGO */}
           <Link
             to="/"
-            className="font-bold text-white hover:text-yellow-400 transition
-                       text-base sm:text-lg md:text-2xl"
+            className="text-base sm:text-lg md:text-2xl font-bold
+                       bg-gradient-to-r from-yellow-400 to-orange-500
+                       bg-clip-text text-transparent"
           >
             JK
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex gap-6 lg:gap-8">
+          {/* DESKTOP MENU */}
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="relative group font-medium transition hover:text-yellow-400
-                           text-sm md:text-base lg:text-lg text-white"
+                className="
+                  px-4 py-2 rounded-xl text-sm lg:text-base font-medium
+                  text-white/90
+                  bg-white/5 backdrop-blur
+                  border border-white/10
+                 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500
+                      hover:text-black hover:scale-105
+                      transition-all duration-100
+                "
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </div>
 
-          {/* Hamburger */}
+          {/* HAMBURGER */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
@@ -77,32 +82,34 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* MOBILE FULL SCREEN MENU */}
+      {/* MOBILE MENU */}
       <div
-        className={`mt-16 fixed inset-0 z-40 bg-slate-900 text-white
-                    flex flex-col items-center justify-center
-                    gap-3 sm:gap-5
-                    transform transition-transform duration-300
-                    md:hidden ${
-                      isOpen ? "translate-x-0" : "translate-x-full"
-                    }`}
+        className={`fixed inset-0 z-40 bg-slate-950/95 backdrop-blur
+                    flex flex-col items-center justify-center gap-4
+                    transition-transform duration-300 md:hidden
+                    ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {navLinks.map((link) => (
           <button
             key={link.id}
             onClick={() => scrollToSection(link.id)}
-            className="font-medium px-4 py-2 transition
-                       text-base sm:text-lg md:text-2xl
-                       border-b border-transparent
-                       hover:border-yellow-400 hover:text-yellow-400"
+            className="
+              px-8 py-3 rounded-xl text-lg font-semibold
+              text-white/90
+              bg-white/5
+              border border-white/10
+             hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500
+                      hover:text-black hover:scale-105
+                      transition-all duration-100
+            "
           >
             {link.label}
           </button>
         ))}
       </div>
 
-      {/* Spacer */}
+      {/* SPACER */}
       <div className="h-16" />
     </>
-  )
+  );
 }

@@ -6,6 +6,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaNodeJs,
+  FaServer,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -14,12 +15,11 @@ import {
   SiPostman,
   SiNetlify,
   SiCanva,
+  SiAiohttp,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
 import { CgWebsite } from "react-icons/cg";
 import { BiSolidComponent } from "react-icons/bi";
-import { FaServer } from "react-icons/fa";
-import { SiAiohttp } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 export default function Skills() {
@@ -61,40 +61,55 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+    <section
+      id="skills"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 overflow-hidden"
+    >
+      {/* Background Glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-yellow-400/10 blur-3xl rounded-full" />
+        <div className="absolute bottom-1/3 right-1/4 w-[350px] h-[350px] bg-orange-500/10 blur-3xl rounded-full" />
+      </div>
+
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-yellow-400">
+        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
           Skills & Technologies
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {skillCategories.map((category) => (
             <div
               key={category.title}
               className="
-                p-8 rounded-xl
-                bg-slate-800
-                border border-yellow-400/30
-                hover:border-yellow-400
-                transition-colors
+                relative p-8 rounded-2xl
+                bg-white/5 backdrop-blur-xl
+                border border-white/10
+                shadow-[0_20px_40px_rgba(0,0,0,0.4)]
+                hover:-translate-y-2 hover:shadow-yellow-400/20
+                transition-all duration-300
               "
             >
-              <h3 className="text-xl font-bold mb-6 text-white">
+              {/* Card Glow */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-yellow-400/10 to-orange-500/10 opacity-0 hover:opacity-100 transition pointer-events-none" />
+
+              <h3 className="text-xl font-bold mb-6 text-white relative">
                 {category.title}
               </h3>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 relative">
                 {category.skills.map((skill) => (
                   <span
                     key={skill.name}
                     className="
                       flex items-center gap-2 px-4 py-2 rounded-full
                       text-sm font-medium
-                      bg-black/40
-                      border border-yellow-400/30
+                      bg-white/10 backdrop-blur
+                      border border-white/20
                       text-yellow-400
-                      hover:bg-black
-                      transition-colors
+                      shadow-md
+                      hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500
+                      hover:text-black hover:scale-105
+                      transition-all
                     "
                   >
                     <span className="text-lg">{skill.icon}</span>
