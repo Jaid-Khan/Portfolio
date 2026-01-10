@@ -17,7 +17,7 @@ export default function About() {
         </h2>
 
         <div data-aos="fade-up"
-     data-aos-anchor-placement="top-center" className="grid md:grid-cols-2 gap-14 items-start">
+     data-aos-anchor-placement="top-bottom" className="grid md:grid-cols-2 gap-14 items-start">
           {/* Left Content */}
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-white/80">
