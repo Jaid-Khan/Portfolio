@@ -10,11 +10,12 @@ import Experience from "./Experience"
 import Certifications from "./Certifications"
 
 
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[oklch(0.08_0_0)]">
-      <Navbar />
       <main>
+      <Navbar />
         <Hero/>
         <Skills />
         <Projects />
@@ -23,8 +24,8 @@ export default function Home() {
         <Education />
         <About />
         <Contact />
-      </main>
       <Footer />
+      </main>
     </div>
   )
 }

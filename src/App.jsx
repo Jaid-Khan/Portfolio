@@ -2,6 +2,7 @@ import './App.css'
 import './index.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CanvasCursor from "./components/CanvasCursor";
 import { useEffect } from "react";
 import Home from './components/Home'
 import { BrowserRouter } from "react-router-dom"
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+     <CanvasCursor />
       <Home />
     </BrowserRouter>
     </>
