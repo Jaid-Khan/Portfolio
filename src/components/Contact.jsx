@@ -36,11 +36,17 @@ export default function Contact() {
 
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
-        <h2 data-aos="zoom-in-right" className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2
+          data-aos="zoom-in-right"
+          className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+        >
           Let’s Connect
         </h2>
 
-        <p data-aos="zoom-in-right" className="text-center mb-12 text-lg text-white/70">
+        <p
+          data-aos="zoom-in-right"
+          className="text-center mb-12 text-lg text-white/70"
+        >
           I’m always open to discussing new projects, creative ideas, or
           opportunities.
         </p>
@@ -48,7 +54,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Info */}
           <div
-          data-aos="zoom-in-right"
+            data-aos="zoom-in-right"
             className="
               p-6 rounded-2xl
               bg-white/5 backdrop-blur-xl
@@ -71,14 +77,23 @@ export default function Contact() {
                   Social Links
                 </h3>
 
-                <div className="space-y-2 text-white/70">
-                  {["GitHub", "LinkedIn", "Twitter / X"].map((item) => (
+                <div className="space-y-2 flex flex-col text-white/70">
+                  {[
+                    { label: "GitHub", link: "https://github.com/Jaid-Khan" },
+                    {
+                      label: "LinkedIn",
+                      link: "https://www.linkedin.com/in/jaid-khan/",
+                    },
+                    { label: "Email", link: "mailto:jaidkhan04072001@gmail.com" },
+                  ].map((item) => (
                     <a
-                      key={item}
-                      href="#"
-                      className="block hover:text-yellow-400 transition-colors"
+                      key={item.label}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/60 hover:text-yellow-400 transition-colors"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   ))}
                 </div>
